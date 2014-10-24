@@ -12,7 +12,9 @@
 Models:
 
 Question belongs_to User
+
 Answer belongs_to User
+
 Answer belongs_to Question
 
 + use seed to mock mass of data
