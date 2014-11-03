@@ -6,6 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.delete_all
+Question.delete_all
+Answer.delete_all
+
 100.times do |i|
   User.create(name: "name#{i}")
 end
@@ -15,5 +19,5 @@ end
 end
 
 10000.times do |i|
-  Answer.create(content: "content" * 20, question_id: Question.pluck(:id).shuffle!.first)
+  Answer.create(content: "content" * 20, question_id: Question.pluck(:id).shuffle!.first, user_id: User.pluck(:id).shuffle!.first)
 end
