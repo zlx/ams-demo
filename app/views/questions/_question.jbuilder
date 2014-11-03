@@ -1,6 +1,7 @@
-json.cache! question do
-  json.(question, :title, :content)
+json.cache! [question, question.user] do
+  json.(question, :title, :content, :created_at, :updated_at)
+  json.random sleep(0.1)
   json.user do
-    json.partial! 'user', user: question.user
+    json.partial! 'users/user', user: question.user
   end
 end

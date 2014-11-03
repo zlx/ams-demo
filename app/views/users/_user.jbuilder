@@ -1,3 +1,4 @@
 json.cache! user do
-  json.name user.name
+  json.(user, :name, :created_at, :updated_at)
+  json.random sleep(0.1)
 end
