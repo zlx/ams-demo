@@ -6,6 +6,8 @@ Models:
 + Answer belongs_to User
 + Answer belongs_to Question
 
+Note:
+
 + use seed to mock mass of data
 + provide API to get questions/answers/users
 + use sleep to simulate calculate in real situation
@@ -33,7 +35,7 @@ Models:
 
 ### Benchmark Result
 
-[benchmark result](https://raw.githubusercontent.com/zlx/ams-demo/master/doc/benchmark_result.md)
+[benchmark result](https://raw.githubusercontent.com/zlx/ams-demo/master/public/benchmark_result.md)
 
 #### ams cache result
 
